@@ -1,19 +1,19 @@
 {
     "poolHost": "your.pool.host",
 
-    "coin": "Zent",
-    "symbol": "ZTC",
-    "coinUnits": 100,
-    "coinDecimalPlaces": 2,
-    "coinDifficultyTarget": 60,
-    "blockchainExplorer": "http://explorer.zent.cash/?hash={id}#blockchain_block",
-    "transactionExplorer": "http://explorer.zent.cash/?hash={id}#blockchain_transaction",
-    "daemonType": "bytecoin",
-    "cnAlgorithm": "cryptonight_pico",
-    "cnVariant": 2,
+    "coin": "Armor",
+    "symbol": "AMX",
+    "coinUnits": 100000000,
+    "coinDecimalPlaces": 8,
+    "coinDifficultyTarget": 120,
+    "blockchainExplorer": "http://explorer/?hash={id}#blockchain_block",
+    "transactionExplorer": "http://explorer/?hash={id}#blockchain_transaction",
+    "daemonType": "default",
+    "cnAlgorithm": "cryptonight",
+    "cnVariant": 15,
     "cnBlobType": 2,
     "includeHeight": true,
-    "restfulApiWallet" : true,
+    "restfulApiWallet" : false,
     "restfulApiDaemonAndWallet": false,	
 
     "logging": {
@@ -71,8 +71,8 @@
         "enabled": true,
         "mergedMining": true,
         "clusterForks": "auto",
-        "poolAddress": "Your ZTC Wallet address",
-        "intAddressPrefix": 4419,
+        "poolAddress": "Your AMX Wallet address",
+        "intAddressPrefix": 1717961,
         "blockRefreshInterval": 1000,
         "minerTimeout": 900,
         "sslCert": "./cert.pem",
@@ -81,17 +81,17 @@
         "ports": [
             {
                 "port": 11151,
-                "difficulty": 400000,
+                "difficulty": 500,
                 "desc": "Low end hardware"
             },
             {
                 "port": 11152,
-                "difficulty": 600000,
+                "difficulty": 10000,
                 "desc": "Mid range hardware"
             },
             {
                 "port": 11153,
-                "difficulty": 700000,
+                "difficulty": 50000,
                 "desc": "High end hardware"
             },
             {
@@ -102,7 +102,7 @@
         ],
         "varDiff": {
             "minDiff": 100,
-            "maxDiff": 5000000,
+            "maxDiff": 100000000,
             "targetTime": 60,
             "retargetTime": 30,
             "variancePercent": 30,
@@ -148,25 +148,25 @@
 
     "payments": {
         "enabled": true,
-        "interval": 120,
-        "maxAddresses": 100,
-        "mixin": 3,
+        "interval": 300,
+        "maxAddresses": 50,
+        "mixin": 6,
         "priority": 0,
         "transferFee": 10,
         "dynamicTransferFee": true,
         "minerPayFee" : true,
-        "minPayment": 500,
+        "minPayment": 100000000,
         "maxPayment": null,
-        "maxTransactionAmount": 0,
-        "denomination": 100
+        "maxTransactionAmount": 500000000000,
+        "denomination": 10000000
     },
 
     "blockUnlocker": {
         "enabled": true,
         "interval": 30,
-        "depth": 20,
-	"poolFee": 0.0,
-	"soloFee": 0.0,
+        "depth": 5,
+	"poolFee": 5.0,
+	"soloFee": 5.0,
 	"finderReward" : 0.0,
         "devDonation": 0.5,
         "networkFee": 0.0,
@@ -275,11 +275,6 @@
             "domain": "mg.yourdomain"
         }
     },
-    "discord": {
-        "enabled": false,
-        "token": "",
-        "channel": ""
-    },
     "telegram": {
         "enabled": false,
         "botName": "",
@@ -300,11 +295,11 @@
     "monitoring": {
         "daemon": {
             "checkInterval": 60,
-            "rpcMethod": "getblockcount"
+            "rpcMethod": "get_status"
         },
         "wallet": {
             "checkInterval": 60,
-            "rpcMethod": "getBalance"
+            "rpcMethod": "get_balance"
         }
     },
 
@@ -371,7 +366,7 @@
         },
         "blocks": {
             "enabled": true,
-            "days": 30
+            "days": 365
         }
     }
 }
