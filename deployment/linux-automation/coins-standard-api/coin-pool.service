@@ -1,5 +1,5 @@
 [Unit]
-Description=Zent Cash Mining Pool Service
+Description=Mining Pool Service
 After=network.target
 
 [Service]
@@ -9,7 +9,7 @@ SyslogIdentifier=cryptonote-nodejs-pool
 ExecStart=/usr/bin/node init.js
 
 # Change to the location of cryptonote-node-js-pool
-WorkingDirectory=/path/to/your/cryptonote-nodejs-pool/pool
+WorkingDirectory=/path/to/your/Cryptonight-Radioactive-pool/pool
 
 # Set user and group that will run the pool
 User=pool-user
