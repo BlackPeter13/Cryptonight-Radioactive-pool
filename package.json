@@ -3,10 +3,10 @@
 	"version": "2.1.2",
 	"license": "GPL-2.0",
 	"Original author": "Daniel Vandal",
-	"Maintained by": "SuperBlockchainPool",
+	"Maintained by": "BlackPeter13",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/dvandal/cryptonote-nodejs-pool.git"
+		"url": "https://github.com/BlackPeter13/Cryptonight-Radioactive-pool.git"
 	},
 	"dependencies": {
 		"async": "*",
