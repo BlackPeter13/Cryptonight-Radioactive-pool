@@ -123,7 +123,7 @@
 		"port": 8989,
 		"blocks": 30,
 		"payments": 30,
-		"password": "602490588Ti@",
+		"password": "password",
 		"ssl": false,
 		"sslPort": 8989,
 		"sslCert": "./cert.pem",
